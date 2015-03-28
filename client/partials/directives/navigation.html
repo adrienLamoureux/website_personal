@@ -10,7 +10,19 @@
 			</button>
 			<a class="navbar-brand" href="#/" ng-click="changeActiveMenu(0)">WebSite<sup class="version version-beta"> beta</sup></a>
 		</div>
-			<nav-bar-disconnected></nav-bar-disconnected>
+			<div id="navbar" class="collapse navbar-collapse">
+				<ul id="menu" class="nav navbar-nav">
+					<li ng-class="activeMenu==0? 'active' : 'notActive'"><a href="#/" ng-click="changeActiveMenu(0)">Accueil</a></li>
+					<li ng-class="activeMenu==5? 'active' : 'notActive'"><a href="#/" ng-click="changeActiveMenu(5)">Mon CV</a></li>
+					<li ng-class="activeMenu==10? 'active' : 'notActive'"><a href="#/" ng-click="changeActiveMenu(10)">Mes projets</a></li>
+					<li ng-class="activeMenu==15? 'active' : 'notActive'"><a href="#/" ng-click="changeActiveMenu(15)">Mes centres d'intérêts</a></li>
+					<li ng-class="activeMenu==20? 'active' : 'notActive'"><a href="#/" ng-click="changeActiveMenu(15)">Technologies</a></li>
+				</ul>
+				<ul id="menu" class="nav navbar-nav pull-right">
+					<li ng-hide="userConnected" ng-class="activeMenu==25? 'active' : 'notActive'"><a href="#/" ng-click="changeActiveMenu(0); userConnected=true;">Se Connecter</a></li>
+					<li ng-show="userConnected" ng-class="activeMenu==30? 'active' : 'notActive'"><a href="#/" ng-click="changeActiveMenu(0); userConnected=false;">Se Déconnecter</a></li>
+				</ul>
+			</div>
 		</div>
 	</div>
 </nav>
