@@ -1,3 +1,13 @@
+.headerPartPage{
+	display: inline-block;
+    padding-right: 100%;
+	border-bottom: 1px dashed rgb(255,255,255);
+	font-size: 120%;
+	font-family: "Times New Roman", Times, serif;
+	font-style: italic;
+}
+
+
 /*********************************/
 /*** global **********************/
 /***        **********************/
@@ -15,7 +25,7 @@ html {
 }
 
 body {
-	background:lightgrey;	
+	background:black;	
 	padding-bottom :60px;
 }
 

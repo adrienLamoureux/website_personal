@@ -7,6 +7,22 @@ app.config(function($routeProvider){
 			templateUrl: './partials/home.html',
 			controller: 'HomeCtrl'
 		})
+		.when('/cv', {
+			templateUrl: './partials/CV.html',
+			controller: 'CVCtrl'
+		})
+		.when('/projects', {
+			templateUrl: './partials/projects.html',
+			controller: 'ProjectsCtrl'
+		})
+		.when('/interests', {
+			templateUrl: './partials/interests.html',
+			controller: 'InterestCtrl'
+		})
+		.when('/technologies', {
+			templateUrl: './partials/technologies.html',
+			controller: 'TechnoCtrl'
+		})
 		.otherwise({redirectTo: '/'});
 });
 
