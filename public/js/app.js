@@ -7,6 +7,15 @@ app.config(function($routeProvider){
 			templateUrl: './partials/home.html',
 			controller: 'HomeCtrl'
 		})
+		/*.when('/login', {
+			templateUrl: './login.ejs'			
+		})
+		.when('/profile', {
+			templateUrl: './profile.ejs'						
+		})*/
+		/*.when('/signup', {
+			templateUrl: './signup.ejs'								
+		})*/
 		.when('/cv', {
 			templateUrl: './partials/CV.html',
 			controller: 'CVCtrl'

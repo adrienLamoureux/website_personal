@@ -1,20 +1,6 @@
 var mongoose = require('mongoose');
 
-// Schema
 var Schema = mongoose.Schema;
-
-var homeSchema = new Schema({
-	name: String,
-	forename: String,
-	age: String,
-	presentation: String,
-	mailToContact: String,
-	zipCode: Number,
-	city: String,
-	county: String,
-	country: String,
-	street: String
-}, {collection: 'home'});
 
 var formationSchema = new Schema({
 	graduation: String,
@@ -65,29 +51,8 @@ var CVSchema = new Schema({
 	proExps: [proExpSchema]
 }, {collection: 'cv'});
 
-/*
-var userImgSchema = new Schema({
-	userID: {type: mongoose.Schema.Types.ObjectId, ref: 'userModel'},
-	largeImg: {
-		filetype: String,
-		filename: String,
-		filesize: Number,
-		base64: String
-	},
-	smallImg:{
-		filetype: String,
-		filename: String,
-		filesize: Number,
-		base64: String
-	}
-}, {collection:'userImg'});
-*/
-// Model
-
-var homeModel = mongoose.model('home', homeSchema);
 var CVModel = mongoose.model('cv', CVSchema);
 
 module.exports = {
-	homeModel: homeModel,
 	CVModel: CVModel
 };

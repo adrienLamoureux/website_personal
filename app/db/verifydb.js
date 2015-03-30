@@ -1,5 +1,5 @@
 var mongo = require('mongodb').MongoClient;
-var mongoAdress = require('./../config.js').mongoAdress;
+var mongoAdress = require('./../../config/config.js').mongoAdress;
 
 var checkDb = function(db){
 	db.collection('cv', function(err, CVCollection){
