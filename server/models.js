@@ -23,28 +23,28 @@ var formationSchema = new Schema({
 	university: String,
 	dateStarting: String,
 	dateEnding: String
-});
+}, {collection: 'formation'});
 
 var languageSchema = new Schema({
 	name: String,
 	level: String
-});
+}, {collection: 'language'});
 
 var detailedSkillSchema = new Schema({
 	name: String,
 	important: {type: Boolean, default: false},
 	link: String
-});
+}, {collection: 'detailledSkill'});
 
 var skillSchema = new Schema({
 	name: String,
 	details: [detailedSkillSchema]
-});
+}, {collection: 'skill'});
 
 var keywordSchema = new Schema({
 	word: String,
 	link: String
-});
+}, {collection: 'keyword'});
 
 var proExpSchema = new Schema({
 	entreprise: String,
@@ -56,7 +56,7 @@ var proExpSchema = new Schema({
 	keywords: [keywordSchema],
 	dateStarting: Date,
 	dateEnding: Date
-});
+}, {collection: 'proExp'});
 
 var CVSchema = new Schema({
 	formations: [formationSchema],
@@ -65,10 +65,27 @@ var CVSchema = new Schema({
 	proExps: [proExpSchema]
 }, {collection: 'cv'});
 
+/*
+var userImgSchema = new Schema({
+	userID: {type: mongoose.Schema.Types.ObjectId, ref: 'userModel'},
+	largeImg: {
+		filetype: String,
+		filename: String,
+		filesize: Number,
+		base64: String
+	},
+	smallImg:{
+		filetype: String,
+		filename: String,
+		filesize: Number,
+		base64: String
+	}
+}, {collection:'userImg'});
+*/
 // Model
 
-var CVModel = mongoose.model('cv', CVSchema);
 var homeModel = mongoose.model('home', homeSchema);
+var CVModel = mongoose.model('cv', CVSchema);
 
 module.exports = {
 	homeModel: homeModel,

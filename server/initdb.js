@@ -2,7 +2,7 @@ var mongo = require('mongodb').MongoClient;
 var mongoAdress = require('./../config.js').mongoAdress;
 
 var initCV = function(db){
-		db.collection('cv', function(err, collection) {
+	db.collection('cv', function(err, collection) {
 		if (collection) {
 			collection.insert([
 			{
@@ -55,7 +55,7 @@ var initCV = function(db){
 				{
 					name: "Bio-Informatique",
 					détails: [{
-						name: Génomique,
+						name: "Génomique",
 						important: false,
 						link: null
 					}]
@@ -74,7 +74,9 @@ var initCV = function(db){
 					dateEnding: null
 				}
 				]
-			}], function (err, result){});
+			}], function (err, result){
+				console.log("CV inserted");
+			});
 		};
 	});
 };
@@ -94,7 +96,9 @@ var initHome = function(db){
 				county: "Aquitaine",
 				country: "France",
 				street: "18 rue de Villemejan"
-			}], function (err, result){});
+			}], function (err, result){
+				console.log("home inserted")
+			});
 		};
 	});
 };

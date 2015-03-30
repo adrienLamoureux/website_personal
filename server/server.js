@@ -43,7 +43,7 @@ var CVModel = require('./models').CVModel;
 
 
 app.get('/api/home', function(req, res, next){
-	CVModel.find(function(err, coll){
+	homeModel.find(function(err, coll){
 		if (!err) {
 			return res.send(coll);
 		} else {
