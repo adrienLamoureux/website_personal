@@ -7,8 +7,8 @@ var formationSchema = new Schema({
 	domain: String,
 	speciality: String,
 	university: String,
-	dateStarting: String,
-	dateEnding: String
+	dateStarting: Date,
+	dateEnding: Date
 }, {collection: 'formation'});
 
 var languageSchema = new Schema({
@@ -41,7 +41,9 @@ var proExpSchema = new Schema({
 	subject: String,
 	keywords: [keywordSchema],
 	dateStarting: Date,
-	dateEnding: Date
+	dateEnding: Date,
+	hours: String,
+	contractType: String
 }, {collection: 'proExp'});
 
 var CVSchema = new Schema({

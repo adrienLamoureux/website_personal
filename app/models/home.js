@@ -12,7 +12,8 @@ var homeSchema = new Schema({
 	city: String,
 	county: String,
 	country: String,
-	street: String
+	street: String,
+	imageID: {type: mongoose.Schema.Types.ObjectId, ref:'imageModel'}
 }, {collection: 'home'});
 
 var homeModel = mongoose.model('home', homeSchema);

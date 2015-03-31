@@ -1,0 +1,35 @@
+<!-- HomePage Partial -->
+<div id="eventPage" class="container" >
+	<h1 class="headerPartPage"> Formations </h1>
+	<ul>
+	<div ng-repeat="formation in cv.formations">
+		<li> {{formation.dateStarting}} - {{formation.dateEnding}} : {{formation.graduation}} {{formation.domain}} {{formation.speciality}} à l'université de {{formation.university}}</li>
+	</div>
+	</ul>
+	<h1 class="headerPartPage"> Langues étrangères </h1>
+	<ul>
+	<div ng-repeat="language in cv.languages">
+		<li> {{language.name}} : {{language.level}} </li>
+	</div>
+	</ul>
+	<h1 class="headerPartPage"> Compétences techniques </h1>
+	<ul>
+	<div ng-repeat="skill in cv.skills">
+		<li> 
+			<ul>{{skill.name}} : 
+			<div ng-repeat="detailed in skill.details">
+				<li> {{detailed.name}} </li>
+			</div>
+			</ul> 
+		</li>
+	</div>
+	</ul>
+	<h1 class="headerPartPage"> Expériences professionnelles </h1>
+	<ul>
+	<div ng-repeat="proExp in cv.proExps">
+		<li> {{proExp.entreprise}} 
+			
+		</li>
+	</div>
+	</ul>
+</div>

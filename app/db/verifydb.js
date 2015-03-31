@@ -15,6 +15,13 @@ var checkDb = function(db){
 			console.log(homeDocs);
 		});
 	});
+
+	db.collection('image', function(err, imageCollection){
+		imageCollection.find().toArray(function(err, imageDocs){
+			console.log('imageDocs');
+			console.log(imageDocs);
+		});
+	});
 };
 
 mongo.connect(mongoAdress, function(err, db) {
