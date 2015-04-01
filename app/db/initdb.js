@@ -12,16 +12,24 @@ var initCV = function(db){
 					domain: "Informatique",
 					speciality: "Génie Logiciel",
 					university: "Bordeaux",
-					dateStarting: null,
-					dateEnding: null
+					dateStarting: "2013",
+					dateEnding: "2015 (en cours)"
 				},
 				{
 					graduation: "Licence",
 					domain: "Informatique",
 					speciality: null,
 					university: "Bordeaux",
-					dateStarting: null,
-					dateEnding: null
+					dateStarting: "2012",
+					dateEnding: "2013"
+				},
+				{
+					graduation: "DUT",
+					domain: "Génie Biologique",
+					speciality: "option Bio-Informatique",
+					university: "Clermont-Ferrand 1",
+					dateStarting: "2012",
+					dateEnding: "2013"
 				}
 				],
 				languages: [
@@ -47,7 +55,17 @@ var initCV = function(db){
 						link: null
 					},
 					{
-						name: "Architecture Logiciel",
+						name: "Architecture Logiciel Distribuée et Adaptative",
+						important: false,
+						link: null
+					},
+					{
+						name: "Projet d'Etude et de Développement",
+						important: true,
+						link: null
+					},
+					{
+						name: "Logique et Conceptione Formelle",
 						important: false,
 						link: null
 					}]
@@ -56,6 +74,59 @@ var initCV = function(db){
 					name: "Bio-Informatique",
 					details: [{
 						name: "Génomique",
+						important: false,
+						link: null
+					},
+					{
+						name: "Transcriptomique",
+						important: false,
+						link: null
+					},
+					{
+						name: "Protéomique",
+						important: false,
+						link: null
+					},
+					{
+						name: "Modélisation Moléculaire",
+						important: false,
+						link: null
+					},
+					{
+						name: "Visualisation de données et Data Mining",
+						important: false,
+						link: null
+					}]
+				},
+				{
+					name: "Développement",
+					details: [{
+						name: "Calcul Haute Performance",
+						important: false,
+						link: null
+					},
+					{
+						name: "Compilation",
+						important: false,
+						link: null
+					},
+					{
+						name: "Web : LAMP et MEAN",
+						important: false,
+						link: null
+					},
+					{
+						name: "Imagerie et Modélisation 3D",
+						important: false,
+						link: null
+					},
+					{
+						name: "Environnements de développement :",
+						important: false,
+						link: null
+					},
+					{
+						name: "Langages de programmation :",
 						important: false,
 						link: null
 					}]
@@ -70,8 +141,8 @@ var initCV = function(db){
 					stageMasterForename: "The-Vinh",
 					subject: "Réseau de Neurones",
 					keywords: [],
-					dateStarting: null,
-					dateEnding: null,
+					dateStarting: "Juin 2014",
+					dateEnding: "Août 2014",
 					hours: "35 heures hebdomadaire",
 					contractType: "Stage"
 				}
