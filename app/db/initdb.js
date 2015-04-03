@@ -121,12 +121,12 @@ var initCV = function(db){
 						link: null
 					},
 					{
-						name: "Environnements de développement :",
+						name: "Environnements de développement : Visual Studio, Eclipse, NetBeans, Delphi, Maven, Jenkins, Git/Subversion",
 						important: false,
 						link: null
 					},
 					{
-						name: "Langages de programmation :",
+						name: "Langages de programmation : C/C++, Pascal Objet, Java(JSE, J2EE), Python, Perl, R, Lisp, Javascript, PHP, SQL",
 						important: false,
 						link: null
 					}]
@@ -134,17 +134,57 @@ var initCV = function(db){
 				],
 				proExps: [
 				{
-					entreprise: "GO GEO",
+					entreprise: "GO GEOENGENEERING",
 					place: "Pau",
 					linkTo: null,
 					stageMasterName: "TRUONG",
 					stageMasterForename: "The-Vinh",
-					subject: "Réseau de Neurones",
-					keywords: [],
+					subject: "Implémentation d'un réseau de neurones : SOM",
+					keywords: ["Réseau de Neurones", "SOM", "Visual C++", "Qt"],
 					dateStarting: "Juin 2014",
 					dateEnding: "Août 2014",
 					hours: "35 heures hebdomadaire",
 					contractType: "Stage"
+				},
+				{
+					entreprise: "SCOPTIQUE",
+					place: "Mérignac",
+					linkTo: null,
+					stageMasterName: "BATTE",
+					stageMasterForename: "David",
+					subject: "Développement d'un Système de Gestion de Données Techniques",
+					keywords: ["SGDT", "Visual C++", "Qt"],
+					dateStarting: "Mai 2013",
+					dateEnding: "Juillet 2013",
+					hours: "35 heures hebdomadaire",
+					contractType: "Stage"
+				},
+				{
+					entreprise: "SCOPTIQUE",
+					place: "Mérignac",
+					linkTo: null,
+					stageMasterName: "BATTE",
+					stageMasterForename: "David",
+					subject: "Amélioration d'un Système de Gestion de Données Techniques",
+					keywords: ["SGDT", "Visual C++", "Qt"],
+					dateStarting: "Novembre 2013",
+					dateEnding: "Mars 2014",
+					hours: "35 heures hebdomadaire",
+					contractType: "Stage"
+				},
+				{
+					entreprise: "CHU de Limoges",
+					place: "Limoges",
+					linkTo: null,
+					stageMasterName: "Marfak",
+					stageMasterForename: "Abdelghafour",
+					subject: "Réalisation d'un 'package' pour le traitement des données issues des puces affymetrix",
+					keywords: ["R", "Puces à ADN", "Statistiques"],
+					dateStarting: "Avril 2012",
+					dateEnding: "Juillet 2012",
+					hours: "35 heures hebdomadaire",
+					contractType: "Stage"
+				
 				}
 				]
 			}], function (err, result){
