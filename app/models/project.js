@@ -27,7 +27,7 @@ var projectSchema = new Schema({
 	learnings: [String]
 });
 
-var projectModel = mongoose.model('projects', projectSchema);
+var projectModel = mongoose.model('project', projectSchema);
 
 module.exports = {
 	projectModel: projectModel

@@ -259,6 +259,38 @@ var initHome = function(db){
 	});
 };
 
+var initProject = function(db){
+	db.collection('project', function(err, collection) {
+		if (collection) {
+			collection.insert([
+			{
+				title: "My Party",
+				dateStarting: "Février 2014",
+				dateEnding: "Mars 2014",
+				level: "Master 2",
+				teamNumber: 5,
+				workMethods: ["SCRUM", "AGILE"],
+				description: "Projet Web réalisé dans le cadre de l'UE 'Projet d'étude et de développement'. L'objectif du projet a été de créer un site de gestion événementiel",
+				descriptionImgID: null,
+				technologies: ["Mongo, Express, AngularJS, NodeJS"],
+				references: [
+				{
+					
+				},
+				{
+					
+				}
+				],
+				results: [
+				],
+				learnings: ["Renforcement des connaissances en Web (MEAN)", "Application de la méthode SCRUM pour la gestion de projets informatiques"]
+			}], function (err, result){
+				console.log("project inserted")
+			});
+		};
+	});
+};
+
 var initImage = function(db){
 	db.collection('image', function(err, collection) {
 		if (collection) {
@@ -281,5 +313,6 @@ mongo.connect(mongoAdress, function(err, db) {
 
 	initCV(db);
 	initHome(db);
+	initProject(db);
 	initImage(db);
 });
