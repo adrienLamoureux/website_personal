@@ -1,5 +1,5 @@
 // Application MyParty
-var app = angular.module('myWebSite', ['naif.base64', 'ngRoute', 'ngResource','ngProgress', 'ui', 'ui-notification']);
+var app = angular.module('myWebSite', ['naif.base64', 'ngRoute', 'ngResource','ngProgress', 'ui', 'ui-notification', 'youtube-embed']);
 
 app.config(function($routeProvider){
 	$routeProvider

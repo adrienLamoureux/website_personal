@@ -28,8 +28,8 @@ var initCV = function(db){
 					domain: "Génie Biologique",
 					speciality: "option Bio-Informatique",
 					university: "Clermont-Ferrand 1",
-					dateStarting: "2012",
-					dateEnding: "2013"
+					dateStarting: "2010",
+					dateEnding: "2012"
 				}
 				],
 				languages: [
@@ -130,7 +130,19 @@ var initCV = function(db){
 					stageMasterName: "TRUONG",
 					stageMasterForename: "The-Vinh",
 					subject: "Implémentation d'un réseau de neurones : SOM",
-					keywords: ["Réseau de Neurones", "SOM", "Visual C++", "Qt"],
+					keywords: [
+					{
+						word: "Réseau de Neurones"
+					},
+					{
+					 	word: "SOM"
+					},
+					{
+						word: "Visual C++"
+					},
+					{
+						word: "Qt"
+					}],
 					dateStarting: "Juin 2014",
 					dateEnding: "Août 2014",
 					hours: "35 heures hebdomadaire",
@@ -142,12 +154,21 @@ var initCV = function(db){
 					linkTo: null,
 					stageMasterName: "BATTE",
 					stageMasterForename: "David",
-					subject: "Développement d'un Système de Gestion de Données Techniques",
-					keywords: ["SGDT", "Visual C++", "Qt"],
-					dateStarting: "Mai 2013",
-					dateEnding: "Juillet 2013",
-					hours: "35 heures hebdomadaire",
-					contractType: "Stage"
+					subject: "Amélioration d'un Système de Gestion de Données Techniques",
+					keywords: [
+					{
+						word:"SGDT"
+					},
+					{
+						word:"Visual C++"
+					}, 
+					{
+						word:"Qt"
+					}],
+					dateStarting: "Novembre 2013",
+					dateEnding: "Mars 2014",
+					hours: "7:30 heures hebdomadaire",
+					contractType: "CDD"
 				},
 				{
 					entreprise: "SCOPTIQUE",
@@ -155,10 +176,19 @@ var initCV = function(db){
 					linkTo: null,
 					stageMasterName: "BATTE",
 					stageMasterForename: "David",
-					subject: "Amélioration d'un Système de Gestion de Données Techniques",
-					keywords: ["SGDT", "Visual C++", "Qt"],
-					dateStarting: "Novembre 2013",
-					dateEnding: "Mars 2014",
+					subject: "Développement d'un Système de Gestion de Données Techniques",
+					keywords: [
+					{
+						word:"SGDT"
+					}, 
+					{
+						word:"Visual C++"
+					}, 
+					{
+						word:"Qt"
+					}],
+					dateStarting: "Mai 2013",
+					dateEnding: "Juillet 2013",
 					hours: "35 heures hebdomadaire",
 					contractType: "Stage"
 				},
@@ -169,7 +199,16 @@ var initCV = function(db){
 					stageMasterName: "Marfak",
 					stageMasterForename: "Abdelghafour",
 					subject: "Réalisation d'un 'package' pour le traitement des données issues des puces affymetrix",
-					keywords: ["R", "Puces à ADN", "Statistiques"],
+					keywords: [
+					{
+						word:"R"
+					}, 
+					{
+						word:"Puces à ADN"
+					}, 
+					{
+						word:"Data Mining"
+					}],
 					dateStarting: "Avril 2012",
 					dateEnding: "Juillet 2012",
 					hours: "35 heures hebdomadaire",
@@ -205,7 +244,7 @@ var initHome = function(db){
 				name: "LAMOUREUX",
 				forename: "Adrien",
 				age: "22",
-				presentation: "A text",
+				presentation: "je suis étudiant en informatique à l'université de Bordeaux et actuellement en stage à Clinsight. Je vous remercie de votre visite",
 				mailToContact: "vergil1534@gmail.com",
 				zipCode: 33600,
 				city: "Pessac",
