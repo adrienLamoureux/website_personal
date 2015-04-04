@@ -1,19 +1,21 @@
 <!-- HomePage Partial -->
 <div id="eventPage" class="container" >
-	<h1 class="headerPartPage"> Présentation </h1>
-		<div class="writeBody">
-			<div style="float:right; width: 20%;">
-			<img ng-src="data:{{image.filetype}};base64,{{image.base64}}" class="img-thumbnail eventSmallImage"/>
-	        </div>
-	        <div style="float:left; width: 70%">
-	        {{home.presentation}}
+	<div style="float:left; width: 70%">
+		<h1 class="headerPartPage"> Présentation </h1>
+			<div class="writeBody">
+		        {{home.presentation}}
 	      	</div>
-      	</div>
-	<h1 class="headerPartPage"> Contact </h1>
-	<div class="writeBody">
-	<div>{{home.name}} {{home.forename}}</div>
-	<div>age : {{home.age}}</div>
-	<div>mail : {{home.mailToContact}}</div>
-	<div>Adresse : {{home.zipCode}} {{home.city}}</div>
+	</div>
+	<div style="float:right; width: 25%">
+		<img ng-src="data:{{image.filetype}};base64,{{image.base64}}" class="img-thumbnail eventSmallImage"/>
+	</div>
+	<div style="float:left; width: 70%">
+		<h1 class="headerPartPage"> Contact </h1>
+		<div class="writeBody">
+			<div>{{home.name}} {{home.forename}}</div>
+			<div>age : {{home.age}}</div>
+			<div>mail : {{home.mailToContact}}</div>
+			<div>Adresse : {{home.zipCode}} {{home.city}}</div>
+		</div>
 	</div>
 </div>

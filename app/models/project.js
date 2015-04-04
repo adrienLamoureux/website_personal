@@ -13,7 +13,7 @@ var resultSchema = new Schema({
 	filename: String,
 	filesize: Number,
 	base64: String
-});
+}, {collection: 'resultProject'});
 
 var projectSchema = new Schema({
 	title: String,
@@ -26,12 +26,12 @@ var projectSchema = new Schema({
 	filetype: String,
 	filename: String,
 	filesize: Number,
-	base64: String
+	base64: String,
 	technologies: [String],
 	references: [referenceSchema],
 	results: [resultSchema],
 	learnings: [String]
-});
+}, {collection: 'project'});
 
 var projectModel = mongoose.model('project', projectSchema);
 

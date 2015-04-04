@@ -56,5 +56,5 @@ mongo.connect(mongoAdress, function(err, db) {
 	clearCV(db);
 	clearHome(db);
 	clearProject(db);
-	clearImage(db);
+	//clearImage(db);
 });

@@ -3,6 +3,7 @@
 var homeModel = require('./models/home.js').homeModel;
 var CVModel = require('./models/cv.js').CVModel;
 var imageModel = require('./models/image.js').imageModel;
+var projectModel = require('./models/project.js').projectModel;
 
 module.exports = function(app, passport) {
 
@@ -179,6 +180,47 @@ module.exports = function(app, passport) {
 
 	app.delete('/api/image/:id', function(req, res, next){
 		imageModel.remove({_id: req.params.id}, function (err, result){
+			if (err) return next(err);
+			res.send(true);
+		});
+	});
+
+	app.get('/api/project', function(req, res, next){
+		projectModel.find(function(err, coll){
+			if (!err) {
+				return res.send(coll);
+			} else {
+				console.log(err);
+				next(err);
+			}
+		});
+	});
+
+	app.get('/api/project/:id', function (req, res, next) {
+		projectModel.findOne({_id: req.params.id}, function (e, result) {			
+			if (e) return next(e);
+			res.send(result);
+		});
+	});
+
+	app.post('/api/project', function(req, res, next){
+		var project = new projectModel(req.body);
+		project.save(function (e, results){
+			if (e) return next(e);
+			res.send(results);
+		});
+	});
+
+	app.put('/api/project/:id', function(req, res, next){
+		delete req.body._id; //duplicate id bug
+		projectModel.findOneAndUpdate({_id: req.params.id}, req.body, function (err, result){
+			if (err) return next(err);
+			res.send(result);
+		});
+	});
+
+	app.delete('/api/project/:id', function(req, res, next){
+		projectModel.remove({_id: req.params.id}, function (err, result){
 			if (err) return next(err);
 			res.send(true);
 		});

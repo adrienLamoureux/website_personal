@@ -1,0 +1,7 @@
+<div id="eventPage" class="container" >
+	<div ng-repeat="project in projects">
+		<h1 class="headerPartPage"> {{project.title}}</h1>
+		<div>{{project.description}}</div>
+		<img ng-src="data:{{project.filetype}};base64,{{project.base64}}" class="img-thumbnail eventSmallImage"/>
+	</div>
+</div>
