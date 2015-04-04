@@ -5,12 +5,13 @@ app.controller('HomeCtrl', ['$scope', '$rootScope', 'Home', 'Image', 'ngProgress
 	$scope.home = {		
 	};
 	$scope.image={
+		filetype: null,
+		base64: null
 	};
 	$scope.home = Home.query(function(data){
 		$scope.home = data[0];
-		$scope.image = Image.get({id: $scope.home.imageID}, function(image){
-			$scope.image = image;
-			ngProgress.complete();
-		});
+		$scope.image.filetype = data[0].filetype;
+		$scope.image.base64 = data[0].base64;
+		ngProgress.complete();
 	})[0];
 }]);

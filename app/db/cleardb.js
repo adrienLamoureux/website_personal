@@ -25,6 +25,18 @@ var clearHome = function(db){
 	});
 };
 
+var clearProject = function(db){
+		db.collection('project', function(err, collection) {
+		if (collection) {
+			collection.remove({}, function(err,removed) {
+				if (!removed) {
+					console.log("\t--> collection could not be cleared!\n");
+					throw err; return false; }
+			});
+		};
+	});
+};
+
 var clearImage = function(db){
 		db.collection('image', function(err, collection) {
 		if (collection) {
@@ -43,5 +55,6 @@ mongo.connect(mongoAdress, function(err, db) {
 
 	clearCV(db);
 	clearHome(db);
+	clearProject(db);
 	clearImage(db);
 });

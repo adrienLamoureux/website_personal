@@ -13,7 +13,10 @@ var homeSchema = new Schema({
 	county: String,
 	country: String,
 	street: String,
-	imageID: {type: mongoose.Schema.Types.ObjectId, ref:'imageModel'}
+	filetype: String,
+	filename: String,
+	filesize: Number,
+	base64: String
 }, {collection: 'home'});
 
 var homeModel = mongoose.model('home', homeSchema);

@@ -9,7 +9,10 @@ var referenceSchema = new Schema({
 
 var resultSchema = new Schema({
 	description: String,
-	descriptionImgID: {type: mongoose.Schema.Types.ObjectId, ref:'imageModel'}
+	filetype: String,
+	filename: String,
+	filesize: Number,
+	base64: String
 });
 
 var projectSchema = new Schema({
@@ -20,7 +23,10 @@ var projectSchema = new Schema({
 	teamNumber: Number,
 	workMethods: [String],
 	description: String,
-	descriptionImgID: {type: mongoose.Schema.Types.ObjectId, ref:'imageModel'}
+	filetype: String,
+	filename: String,
+	filesize: Number,
+	base64: String
 	technologies: [String],
 	references: [referenceSchema],
 	results: [resultSchema],
