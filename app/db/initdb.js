@@ -55,6 +55,11 @@ var initCV = function(db){
 						link: null
 					},
 					{
+						name: "'Design Pattern'",
+						important: false,
+						link: null
+					},
+					{
 						name: "Architecture Logiciel Distribuée et Adaptative",
 						important: false,
 						link: null
@@ -65,7 +70,7 @@ var initCV = function(db){
 						link: null
 					},
 					{
-						name: "Logique et Conceptione Formelle",
+						name: "Logique et Conception Formelle",
 						important: false,
 						link: null
 					}]
@@ -73,17 +78,7 @@ var initCV = function(db){
 				{
 					name: "Bio-Informatique",
 					details: [{
-						name: "Génomique",
-						important: false,
-						link: null
-					},
-					{
-						name: "Transcriptomique",
-						important: false,
-						link: null
-					},
-					{
-						name: "Protéomique",
+						name: "Génomique, Transcriptomique, Protéomique",
 						important: false,
 						link: null
 					},
@@ -93,7 +88,7 @@ var initCV = function(db){
 						link: null
 					},
 					{
-						name: "Visualisation de données et Data Mining",
+						name: "Visualisation de données, Réseau de Neurones et Data Mining",
 						important: false,
 						link: null
 					}]
@@ -101,17 +96,12 @@ var initCV = function(db){
 				{
 					name: "Développement",
 					details: [{
-						name: "Calcul Haute Performance",
+						name: "Calcul Haute Performance, Multi-threading et Compilation",
 						important: false,
 						link: null
 					},
 					{
-						name: "Compilation",
-						important: false,
-						link: null
-					},
-					{
-						name: "Web : LAMP et MEAN",
+						name: "Web : LAMP (Linux Apache MySQL Php) et MEAN (Mongo Express AngularJS NodeJS)",
 						important: false,
 						link: null
 					},
@@ -185,6 +175,19 @@ var initCV = function(db){
 					hours: "35 heures hebdomadaire",
 					contractType: "Stage"
 				
+				},
+				{
+					entreprise: "Décathlon",
+					place: "Béziers",
+					linkTo: null,
+					stageMasterName: null,
+					stageMasterForename: null,
+					subject: "Vendeur dans le secteur de la natation",
+					keywords: [],
+					dateStarting: "Juillet 2011",
+					dateEnding: "Août 2011",
+					hours: "20 heures hebdomadaire",
+					contractType: "CDD"
 				}
 				]
 			}], function (err, result){
