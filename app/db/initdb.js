@@ -287,6 +287,10 @@ var initProject = function(db){
 				{
 					name: "Site en production",
 					link: "https://protected-thicket-6477.herokuapp.com/"
+				},
+				{
+					name: "Sources",
+					link:"https://github.com/adrienLamoureux/ped_myParty/"
 				}
 				],
 				results: [
@@ -320,6 +324,77 @@ var initProject = function(db){
 				}
 				],
 				learnings: ["Renforcement des connaissances en Web (MEAN)", "Application de la méthode SCRUM pour la gestion de projets informatiques"]
+			},
+			{
+				title: "PlanetGen",
+				dateStarting: "Janvier 2013",
+				dateEnding: "Mars 2013",
+				level: "Master 1",
+				teamNumber: 4,
+				workMethods: ["N/A"],
+				description: "Projet C++ réalisé dans le cadre de l'UE 'Pdp'. L'objectif du projet a été de réaliser une bibiliothèque C++ proposant des méthodes de générations de terrains",
+				filetype: "image/jpeg",
+				filename: "",
+				filesize: 0,
+				base64: null,
+				technologies: ["C++", "ValGrind", "CppCheck", "LibNoise"],
+				references: [
+				{
+					name:"LibNoise",
+					link: null
+				},
+				{
+					name:"Terragen",
+					link: null
+				},
+				{
+					name:"Carte d'élévation",
+					link: null
+				},
+				{
+					name:"Fractale",
+					link: null
+				},
+				{
+					name:"Bruit",
+					link: null
+				},
+				{
+					name: "Sources",
+					link: null
+				}
+				],
+				results: [
+				{
+					description: "Génération d'une carte d'élévation à l'aide de l'algorithme du bruit de Perlin",
+					filetype: "image/jpeg",
+					filename: "perlinNoise.jpg",
+					filesize: 0,
+					base64: null
+				},
+				{
+					description: "Génération d'une carte d'élévation à l'aide de l'algorithme du diamond-square (Fractale)",
+					filetype: "image/jpeg",
+					filename: "diamondSquare.jpg",
+					filesize: 0,
+					base64: null
+				},
+				{
+					description: "Construction d'un modèle 3D sur Terragen à partir d'une carte d'élévation (1)",
+					filetype: "image/jpeg",
+					filename: "terra1.jpg",
+					filesize: 0,
+					base64: null
+				},
+				{
+					description: "Construction d'un modèle 3D sur Terragen à partir d'une carte d'élévation (2)",
+					filetype: "image/jpeg",
+					filename: "terra2.jpg",
+					filesize: 0,
+					base64: null
+				}	
+				],
+				learnings: ["Amélioration des compétences en C++", "Algorithmes de générations procédurales", "Architecture Logiciel"]
 			}], function (err, result){
 				console.log("project inserted")
 			});
