@@ -11,6 +11,12 @@
 	font-family: "Times New Roman", Times, serif;
 }
 
+.imgStyle{
+	margin: 0px auto;
+	display:block;
+	margin-top:10px;
+	margin-bottom:10px;
+}
 
 /*********************************/
 /*** global **********************/
@@ -462,6 +468,8 @@ nav#mineEventNav{
 #mineEvents img.eventSmallImage{
 	margin-top:10px;
 	margin-bottom:10px;
+	margin: 0px auto;
+	display:block;
 }
 
 #mineEvents table.income{
@@ -527,8 +535,9 @@ table#ticket table td.qrCode{
 }
 table#ticket img.eventSmallImage{
 	width:250px;
-	margin:0px;
 	padding:0px;
+	margin: 0px auto;
+	display:block;
 }
 table#ticket td.info{
 	padding-left:15px;

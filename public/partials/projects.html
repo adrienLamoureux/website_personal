@@ -1,7 +1,40 @@
 <div id="eventPage" class="container" >
-	<div ng-repeat="project in projects">
+	<div ng-repeat="project in projects" class="writeBody">
 		<h1 class="headerPartPage"> {{project.title}}</h1>
 		<div>{{project.description}}</div>
-		<img ng-src="data:{{project.filetype}};base64,{{project.base64}}" class="img-thumbnail eventSmallImage"/>
+			<img ng-src="data:{{project.filetype}};base64,{{project.base64}}" class="img-thumbnail imgStyle" height="420" width="600"/>
+		<div> 
+		<ul>
+			<li>Informations complémentaires :
+				<ul>
+					<li> Niveau : {{project.level}} </li>
+					<li> Période : {{project.dateStarting}} - {{project.dateEnding}} </li>
+					<li> Nombre de collaborateurs : {{project.teamNumber}} </li>
+					<li> Méthodes de travail :<span ng-repeat="workMethod in project.workMethods"> {{workMethod}};</span> </li>
+					<li> Technologies utilisées :<span ng-repeat="technologie in project.technologies"> {{technologie}};</span> </li>
+				</ul>
+			</li>
+			<li>Résultats :
+				<ul>
+					<div ng-repeat="result in project.results">
+						<li>{{result.description}} : <br/><img ng-src="data:{{result.filetype}};base64,{{result.base64}}" class="img-thumbnail imgStyle" height="420" width="600"/>
+						</li>
+					</div>
+				</ul>
+			</li>
+			<li>Expériences acquises : 
+				<ul>
+					<div ng-repeat="learning in project.learnings">
+						<li>{{learning}}</li>
+				</ul>
+			</li>
+			<li>Références :
+				<ul>
+					<div ng-repeat="reference in project.references">
+						<li>{{reference.name}} : {{reference.link}}</li>
+				</ul>
+			</li>
+		</ul>
+		</div>
 	</div>
 </div>
