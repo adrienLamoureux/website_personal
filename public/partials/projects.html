@@ -2,7 +2,7 @@
 	<div ng-repeat="project in projects" class="writeBody">
 		<h1 class="headerPartPage"> {{project.title}}</h1>
 		<div>{{project.description}}</div>
-			<img ng-src="data:{{project.filetype}};base64,{{project.base64}}" class="img-thumbnail imgStyle" height="420" width="600"/>
+			<img ng-src="data:{{project.filetype}};base64,{{project.base64}}" class="img-thumbnail imgStyle" height="400" width="400"/>
 		<div> 
 		<ul>
 			<li>Informations complémentaires :
@@ -17,7 +17,7 @@
 			<li>Résultats :
 				<ul>
 					<div ng-repeat="result in project.results">
-						<li>{{result.description}} : <br/><img ng-src="data:{{result.filetype}};base64,{{result.base64}}" class="img-thumbnail imgStyle" height="420" width="600"/>
+						<li>{{result.description}} : <br/><img ng-src="data:{{result.filetype}};base64,{{result.base64}}" class="img-thumbnail imgStyle" height="400" width="400"/>
 						</li>
 					</div>
 				</ul>
