@@ -4,6 +4,7 @@ var homeModel = require('./models/home.js').homeModel;
 var CVModel = require('./models/cv.js').CVModel;
 var imageModel = require('./models/image.js').imageModel;
 var projectModel = require('./models/project.js').projectModel;
+var technoModel = require('./models/techno.js').technoModel;
 
 module.exports = function(app, passport) {
 
@@ -221,6 +222,47 @@ module.exports = function(app, passport) {
 
 	app.delete('/api/project/:id', function(req, res, next){
 		projectModel.remove({_id: req.params.id}, function (err, result){
+			if (err) return next(err);
+			res.send(true);
+		});
+	});
+
+	app.get('/api/techno', function(req, res, next){
+		technoModel.find(function(err, coll){
+			if (!err) {
+				return res.send(coll);
+			} else {
+				console.log(err);
+				next(err);
+			}
+		});
+	});
+
+	app.get('/api/techno/:id', function (req, res, next) {
+		technoModel.findOne({_id: req.params.id}, function (e, result) {			
+			if (e) return next(e);
+			res.send(result);
+		});
+	});
+
+	app.post('/api/techno', function(req, res, next){
+		var techno = new technoModel(req.body);
+		techno.save(function (e, results){
+			if (e) return next(e);
+			res.send(results);
+		});
+	});
+
+	app.put('/api/techno/:id', function(req, res, next){
+		delete req.body._id; //duplicate id bug
+		technoModel.findOneAndUpdate({_id: req.params.id}, req.body, function (err, result){
+			if (err) return next(err);
+			res.send(result);
+		});
+	});
+
+	app.delete('/api/techno/:id', function(req, res, next){
+		technoModel.remove({_id: req.params.id}, function (err, result){
 			if (err) return next(err);
 			res.send(true);
 		});

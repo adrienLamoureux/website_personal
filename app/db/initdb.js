@@ -395,6 +395,26 @@ var initProject = function(db){
 	});
 };
 
+var initTechno = function(db){
+	db.collection('techno', function(err, collection) {
+		if (collection) {
+			collection.insert([
+			{
+				frontEnd: "AngularJS",
+				server: "Express",
+				database: "MongoDB",
+				onlineServer: "Heroku",
+				onlineDatabase: "MongoLab",
+				packaging: "npm",
+				sources: ""
+
+			}], function (err, result){
+				console.log("techno inserted")
+			});
+		};
+	});
+};
+
 var initImage = function(db){
 	db.collection('image', function(err, collection) {
 		if (collection) {
@@ -418,5 +438,6 @@ mongo.connect(mongoAdress, function(err, db) {
 	initCV(db);
 	initHome(db);
 	initProject(db);
+	initTechno(db);
 	//initImage(db);
 });

@@ -5,7 +5,6 @@ app.controller('ProjectsCtrl', ['$scope', '$rootScope', 'Project', 'ngProgress',
 
 	$scope.projects = Project.query(function(data){
 		$scope.projects = data;
-		console.log(data);
 		ngProgress.complete();
 	});
 }]);
