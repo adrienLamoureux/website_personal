@@ -61,6 +61,18 @@ var clearTechno = function(db){
 	});
 };
 
+var clearInterest = function(db){
+		db.collection('interest', function(err, collection) {
+		if (collection) {
+			collection.remove({}, function(err,removed) {
+				if (!removed) {
+					console.log("\t--> collection could not be cleared!\n");
+					throw err; return false; }
+			});
+		};
+	});
+};
+
 mongo.connect(mongoAdress, function(err, db) {
 	if (err) { console.log("\t--> Connection failure !\n"); return false; }
 	console.log("\t--> Successfully connected to the database!\n");
@@ -69,5 +81,6 @@ mongo.connect(mongoAdress, function(err, db) {
 	clearHome(db);
 	clearProject(db);
 	clearTechno(db);
+	clearInterest(db);
 	//clearImage(db);
 });

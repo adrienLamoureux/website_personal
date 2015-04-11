@@ -1,0 +1,21 @@
+<div id="eventPage" class="container" >
+	<div ng-repeat="interest in interests" class="writeBody">
+		<h1 class="headerPartPage"> {{interest.title}}</h1>
+		<div>{{interest.description}}</div>
+		<ul>
+			<div ng-repeat="image in interest.images">
+				<li> {{image.description}} : <br/><img ng-src="data:{{image.filetype}};base64,{{image.base64}}" class="img-thumbnail imgStyle" height="400" width="400"/></li>
+			</div>
+		</ul>
+		<ul>
+			<div ng-repeat="video in interest.videos">
+				 <li>{{video.description}} : <br/><youtube-video video-id="video.link"></youtube-video></li>
+			</div>
+		</ul>
+		<ul>
+			<div ng-repeat="reference in interest.references">
+				<li> {{reference.name}} : {{reference.link}}</li>
+			</div>
+		</ul>
+	</div>
+</div>

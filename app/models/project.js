@@ -13,7 +13,7 @@ var resultSchema = new Schema({
 	filename: String,
 	filesize: Number,
 	base64: String
-}, {collection: 'resultProject'});
+});
 
 var projectSchema = new Schema({
 	title: String,

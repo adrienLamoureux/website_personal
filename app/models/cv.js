@@ -9,28 +9,28 @@ var formationSchema = new Schema({
 	university: String,
 	dateStarting: String,
 	dateEnding: String
-}, {collection: 'formation'});
+});
 
 var languageSchema = new Schema({
 	name: String,
 	level: String
-}, {collection: 'language'});
+});
 
 var detailedSkillSchema = new Schema({
 	name: String,
 	important: {type: Boolean, default: false},
 	link: String
-}, {collection: 'detailledSkill'});
+});
 
 var skillSchema = new Schema({
 	name: String,
 	details: [detailedSkillSchema]
-}, {collection: 'skill'});
+});
 
 var keywordSchema = new Schema({
 	word: String,
 	link: String
-}, {collection: 'keyword'});
+});
 
 var proExpSchema = new Schema({
 	entreprise: String,
@@ -44,7 +44,7 @@ var proExpSchema = new Schema({
 	dateEnding: String,
 	hours: String,
 	contractType: String
-}, {collection: 'proExp'});
+});
 
 var CVSchema = new Schema({
 	formations: [formationSchema],

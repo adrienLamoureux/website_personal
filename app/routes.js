@@ -5,6 +5,7 @@ var CVModel = require('./models/cv.js').CVModel;
 var imageModel = require('./models/image.js').imageModel;
 var projectModel = require('./models/project.js').projectModel;
 var technoModel = require('./models/techno.js').technoModel;
+var interestModel = require('./models/interest.js').interestModel;
 
 module.exports = function(app, passport) {
 
@@ -263,6 +264,47 @@ module.exports = function(app, passport) {
 
 	app.delete('/api/techno/:id', function(req, res, next){
 		technoModel.remove({_id: req.params.id}, function (err, result){
+			if (err) return next(err);
+			res.send(true);
+		});
+	});
+
+	app.get('/api/interest', function(req, res, next){
+		interestModel.find(function(err, coll){
+			if (!err) {
+				return res.send(coll);
+			} else {
+				console.log(err);
+				next(err);
+			}
+		});
+	});
+
+	app.get('/api/interest/:id', function (req, res, next) {
+		interestModel.findOne({_id: req.params.id}, function (e, result) {			
+			if (e) return next(e);
+			res.send(result);
+		});
+	});
+
+	app.post('/api/interest', function(req, res, next){
+		var interest = new interestModel(req.body);
+		interest.save(function (e, results){
+			if (e) return next(e);
+			res.send(results);
+		});
+	});
+
+	app.put('/api/interest/:id', function(req, res, next){
+		delete req.body._id; //duplicate id bug
+		interestModel.findOneAndUpdate({_id: req.params.id}, req.body, function (err, result){
+			if (err) return next(err);
+			res.send(result);
+		});
+	});
+
+	app.delete('/api/interest/:id', function(req, res, next){
+		interestModel.remove({_id: req.params.id}, function (err, result){
 			if (err) return next(err);
 			res.send(true);
 		});
