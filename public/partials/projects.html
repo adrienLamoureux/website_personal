@@ -1,10 +1,10 @@
 <div id="eventPage" class="container" >
-	<div ng-repeat="project in projects" class="writeBody">
+	<div ng-repeat="project in projects" >
 		<h1 class="headerPartPage"> {{project.title}}</h1>
-		<div>{{project.description}}</div>
+		<div class="writeBody">{{project.description}}</div>
 			<img ng-src="data:{{project.filetype}};base64,{{project.base64}}" class="img-thumbnail imgStyle" height="400" width="400"/>
 		<div> 
-		<ul>
+		<ul class="writeBody">
 			<li>Informations complémentaires :
 				<ul>
 					<li> Niveau : {{project.level}} </li>
