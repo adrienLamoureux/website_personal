@@ -28,6 +28,10 @@ app.config(function($routeProvider){
 			templateUrl: './partials/interests.html',
 			controller: 'InterestCtrl'
 		})
+		.when('/tests', {
+			templateUrl: './partials/tests.html',
+			controller: 'TestCtrl'
+		})
 		.when('/technologies', {
 			templateUrl: './partials/technologies.html',
 			controller: 'TechnoCtrl'
