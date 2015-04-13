@@ -1,21 +1,23 @@
 <div id="eventPage" class="container" >
 	<div ng-repeat="interest in interests">
-		<h1 class="headerPartPage"> {{interest.title}}</h1>
-		<div class="writeBody">{{interest.description}}</div>
-		<ul class="writeBody">
-			<div ng-repeat="image in interest.images">
-				<li> {{image.description}} : <br/><img ng-src="data:{{image.filetype}};base64,{{image.base64}}" class="img-thumbnail imgStyle" height="400" width="400"/></li>
-			</div>
-		</ul>
-		<ul class="writeBody">
-			<div ng-repeat="video in interest.videos">
-				 <li>{{video.description}} : <br/><youtube-video video-id="video.link"></youtube-video></li>
-			</div>
-		</ul>
-		<ul class="writeBody">
-			<div ng-repeat="reference in interest.references">
-				<li> {{reference.name}} : {{reference.link}}</li>
-			</div>
-		</ul>
+		<h1 class="headerPartPage"> {{interest.title}} <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" ng-click="showState($index+1)"><span class="caret"></span></a></h1>
+		<div class="{{$index+1}}" style="display:none">
+			<div class="writeBody">{{interest.description}}</div>
+			<ul class="writeBody">
+				<div ng-repeat="image in interest.images">
+					<li> {{image.description}} : <br/><img ng-src="data:{{image.filetype}};base64,{{image.base64}}" class="img-thumbnail imgStyle" height="400" width="400"/></li>
+				</div>
+			</ul>
+			<ul class="writeBody">
+				<div ng-repeat="video in interest.videos">
+					 <li>{{video.description}} : <br/><youtube-video video-id="video.link"></youtube-video></li>
+				</div>
+			</ul>
+			<ul class="writeBody">
+				<div ng-repeat="reference in interest.references">
+					<li> {{reference.name}} : {{reference.link}}</li>
+				</div>
+			</ul>
+		</div>
 	</div>
 </div>

@@ -7,4 +7,5 @@ app.controller('ProjectsCtrl', ['$scope', '$rootScope', 'Project', 'ngProgress',
 		$scope.projects = data;
 		ngProgress.complete();
 	});
+
 }]);

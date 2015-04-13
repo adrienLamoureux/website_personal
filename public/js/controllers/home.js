@@ -1,7 +1,17 @@
 // HomePage Controller
 app.controller('HomeCtrl', ['$scope', '$rootScope', 'Home', 'Image', 'ngProgress', function ($scope, $rootScope, Home, Image, ngProgress){
+	
+	// rootScope def for all ctrl
+
+	$rootScope.showState = function(divID){
+		$('.'+divID).toggle();
+	}
+
+	//
+
 	ngProgress.color("#B40404");
 	ngProgress.start();
+
 	$scope.home = {		
 	};
 	$scope.image={
