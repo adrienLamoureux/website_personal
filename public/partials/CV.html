@@ -30,9 +30,15 @@
 				<li> Localisation : {{proExp.place}} </li>
 				<li> Sujet : {{proExp.subject}} </li>
 				<li> Responsable : {{proExp.stageMasterName}} {{proExp.stageMasterForename}} </li>
-				<li> Mots clés : <span ng-repeat="keyword in proExp.keywords"> {{keyword.word}} ;</span></li>
+				<span ng-repeat="keyword in proExp.keywords" class="keyword"> {{keyword.word}} ;</span>
 			</ul>
 		</li>
+	</div>
+	</ul>
+	<h1 class="headerPartPage"> Centres d'intérêts </h1>
+	<ul class="writeBody">
+	<div ng-repeat="interest in cv.interests">
+		<li> {{interest}}</li>
 	</div>
 	</ul>
 </div>

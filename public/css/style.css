@@ -18,6 +18,10 @@
 	margin-bottom:10px;
 }
 
+.keyword{
+	font-style: italic;
+}
+
 /*********************************/
 /*** global **********************/
 /***        **********************/
@@ -39,9 +43,9 @@ body {
 	padding-bottom :60px;
 }
 
-.caret {
-	color: white!important;
-	background-color: #000!important;
+.glyphicon.glyphicon-chevron-down{
+	color: #555;
+	font-size: 12px;
 }
 
 .footer {

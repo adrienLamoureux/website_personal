@@ -50,7 +50,8 @@ var CVSchema = new Schema({
 	formations: [formationSchema],
 	languages: [languageSchema],
 	skills: [skillSchema],
-	proExps: [proExpSchema]
+	proExps: [proExpSchema],
+	interests: [String]
 }, {collection: 'cv'});
 
 var CVModel = mongoose.model('cv', CVSchema);

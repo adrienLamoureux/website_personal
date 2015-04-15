@@ -228,6 +228,12 @@ var initCV = function(db){
 					hours: "20 heures hebdomadaire",
 					contractType: "CDD"
 				}
+				],
+				interests: [
+				"Japon",
+				"Cosmologie",
+				"Modélisation 3D",
+				"Jeux de société"
 				]
 			}], function (err, result){
 				console.log("CV inserted");
@@ -244,7 +250,7 @@ var initHome = function(db){
 				name: "LAMOUREUX",
 				forename: "Adrien",
 				age: "22",
-				presentation: "je suis étudiant en informatique à l'université de Bordeaux et actuellement en stage à Clinsight. Je vous remercie de votre visite",
+				presentation: "Bonjour. Je suis étudiant en informatique spécialisé dans le Génie Logiciel à l'université de Bordeaux. Je suis actuellement en stage à Clinsight pendant 6 mois. Je vous remercie de votre visite.",
 				mailToContact: "vergil1534@gmail.com",
 				zipCode: 33600,
 				city: "Pessac",

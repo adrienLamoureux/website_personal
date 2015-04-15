@@ -1,6 +1,6 @@
 <div id="eventPage" class="container" >
 	<div ng-repeat="project in projects" >
-		<h1 class="headerPartPage"> {{project.title}} <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" ng-click="showState($index+1)"><span class="caret"></span></a></h1>
+		<h1 class="headerPartPage"> {{project.title}} <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" ng-click="showState($index+1)"><span class="glyphicon glyphicon-chevron-down"></span></a></h1>
  		<div class="{{$index+1}}" style="display:none">
 			<div class="writeBody">{{project.description}}</div>
 				<img ng-src="data:{{project.filetype}};base64,{{project.base64}}" class="img-thumbnail imgStyle" height="400" width="400"/>
