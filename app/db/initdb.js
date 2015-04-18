@@ -116,7 +116,7 @@ var initCV = function(db){
 						link: null
 					},
 					{
-						name: "Langages de programmation : C/C++, Pascal Objet, Java(JSE, J2EE), Python, Perl, R, Lisp, Javascript, PHP, SQL",
+						name: "Langages de programmation : C/C++, Qt, Pascal Objet, Java(JSE, J2EE), Python, Perl, R, Lisp, Javascript, PHP, SQL",
 						important: false,
 						link: null
 					}]
