@@ -1,6 +1,6 @@
 <!-- Navigaion Bar Partial -->
-<nav class="navbar navbar-inverse navbar-fixed-top">        					
-	<div class="container-fluid">
+<nav class="navbar">        					
+	<!--<div class="container-fluid">
 		<div class="navbar-header">
 			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
 				<span class="sr-only">Toggle navigation</span>
@@ -9,8 +9,8 @@
 				<span class="icon-bar"></span>
 			</button>
 			<a class="navbar-brand" href="#/" ng-click="changeActiveMenu(0)">WebSite<sup class="version version-beta"> beta</sup></a>
-		</div>
-			<div id="navbar" class="collapse navbar-collapse">
+		</div>-->
+			<div class="navbar" class="collapse navbar-collapse">
 				<ul id="menu" class="nav navbar-nav">
 					<li ng-class="activeMenu==0? 'active' : 'notActive'"><a href="#/" ng-click="changeActiveMenu(0)">Accueil</a></li>
 					<li ng-class="activeMenu==5? 'active' : 'notActive'"><a href="#/cv" ng-click="changeActiveMenu(5)">Mon CV</a></li>

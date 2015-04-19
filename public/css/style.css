@@ -1,3 +1,32 @@
+* { margin:0; padding:0; }
+body, div, span, p, a, img, ul, ol, li, table, th, tr, td, form, fieldset, legend, dl, dt, dd, blockquote, applet, object { border:0; }
+body { 
+  padding: 0; 
+  background: #fff url("./resources/bg.jpg") repeat-x; 
+  background-size: 1px 100px;
+  font: 0.8em/1.5 "arial",sans-serif; 
+  color: #354146; 
+  text-align: center; 
+}
+
+/* nadpisy --------------------------------------------------------------------- */
+h1, h2, h3, h4, h5, h6 { margin:15px 0 10px 0; }
+h1 { font-size:200%; font-family: Georgia;}
+h1#logo {color: #ced1d2; text-decoration: none; display: block;padding: 18px 0px 17px; font-weight: normal; width: 891px; height:74px;}
+h2 { font-size:130%; color: #354146;font-weight: bold; padding: 0;margin:0; }
+h3 { font-size:120%; }
+h4 { font-size:120%; }
+h5 { font-size:100%; }
+
+#layout { 
+
+  text-align:left; 
+}
+
+#header {
+	width:891px; margin:0 auto; 
+}
+
 .headerPartPage{
 	display: inline-block;
 	border-bottom: 1px dashed rgb(255,255,255);
@@ -5,44 +34,33 @@
 	font-family: "Times New Roman", Times, serif;
 	font-style: italic;
 }
-
-.writeBody{
-	font-size: 90%;
-	font-family: "Times New Roman", Times, serif;
-}
-
-.imgStyle{
-	margin: 0px auto;
-	display:block;
-	margin-top:10px;
-	margin-bottom:10px;
-}
-
-.keyword{
-	font-style: italic;
-}
-
+             
+/* horizontalni navigace --------------------------------------------------- */
 .navbar{
-	background: linear-gradient(#333, #111);
+	width:891px; 
+    margin:0 auto;
+    position: 50 
 }
 
 .nav.navbar-nav{
 	border-radius: 3px;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, .3),
-                0 3px 5px rgba(0, 0, 0, .2),
-                0 5px 10px rgba(0, 0, 0, .2),
-                0 20px 20px rgba(0, 0, 0, .15);
+    
+    margin-top: -40px; ; padding:0; list-style:none;height: 35px;
+}
+
+.nav.navbar-nav li {
+	float:left; display:block; margin:0; padding:0;
 }
 
 .nav.navbar-nav li a{
+	float: left;
+	font-size: 85%;
+	color: #fff;
+	text-decoration: none;
+	padding: 12px 20px 10px;
+	text-align: center;
     display: block;
-    text-align: center;
-    color: rgba(100, 100, 100, .7); 
-    text-decoration: none;
     text-shadow: 0 1px 0 rgba(255, 255, 255, .4);
-    transition: padding .3s;
-    transition: padding .3s, background .3s;
-    transition: all .3s .1s;
     position: relative;
 }
 
@@ -55,13 +73,13 @@
 
 .nav.navbar-nav li a:hover, 
 .nav.navbar-nav li a:focus{
-    background: rgba(255,255,255,.2);
+    background: rgba(255,255,255,0);
     transition: all .3s 0s; 
 } 
 
 .nav.navbar-nav li a:active{
-    background: linear-gradient(rgba(0,0,0,.2),rgba(0,0,0,.1)); 
-    box-shadow: 0 0 2px rgba(0,0,0,.3) inset;
+    background: linear-gradient(rgba(150,150,150,.2),rgba(150,150,150,.1)); 
+    box-shadow: 0 0 2px rgba(150,150,150,.3) inset;
 }
 
 .nav.navbar-nav li a::before{
@@ -83,92 +101,7 @@
                 0 -1px 0 rgba(0, 0, 0, .4);
 }
 
-/*********************************/
-/*** global **********************/
-/***        **********************/
-.center{
-	display:block;
-	text-align:center;
-	float:none;
-	margin:auto!important;
-}
+ul, ol { display:block; margin:0px 0 15px 40px; }
 
-html {
-	height : 100%;
-	min-height : 100%;
-
-}
-
-body {
-	background:black;	
-	padding-bottom :60px;
-}
-
-.glyphicon.glyphicon-chevron-down{
-	color: #555;
-	font-size: 12px;
-}
-
-.footer {
-	position : fixed;
-	bottom:0;
-	width : 100%;
-	height : 48px;
-	text-align: center;
-	background-color: #111!important;
-	color : #999;
-}
-
-.footer p {
-	margin-top : 14px;
-}
-
-.footer a {
-	text-decoration: none;
-	color : #999;
-}
-
-.footer a:hover {
-	color : white;
-}
-
-/********************************/
-/***********  Menu  *************/
-/********************************/
-sup.version {
-	font-size: 50%;
-	text-transform: uppercase;
-	top: -1em;
-}
-
-.navbar img {
-	margin-top :-12px;
-	margin-bottom :-12px;
-	margin-right : 10px;		
-	width:auto;
-	height:34px;
-}
-.version-beta {
-	color: orange;
-}
-
-/*********************************/
-/*** page ************************/
-/***      ************************/
-#page{
-	margin-top:60px; /* required to let some place for the top-fixed main menu bar. */
-	margin-bottom:60px;
-}
-
-/*********************************/
-/*** event ***********************/
-/***       ***********************/
-#eventPage{
-	width:100%;
-	color: #FFF;
-	font-size: 16px;
-	font-family: "Century Gothic",arial,serif;
-	text-align: left;
-	padding-top:20px;
-}
+.noscreen { display:none; }
 

@@ -1,0 +1,193 @@
+.headerPartPage{
+	display: inline-block;
+	border-bottom: 1px dashed rgb(255,255,255);
+	font-size: 120%;
+	font-family: "Times New Roman", Times, serif;
+	font-style: italic;
+}
+
+.writeBody{
+	font-size: 90%;
+	font-family: "Times New Roman", Times, serif;
+}
+
+.imgStyle{
+	margin: 0px auto;
+	display:block;
+	margin-top:10px;
+	margin-bottom:10px;
+}
+
+.keyword{
+	font-style: italic;
+}
+
+.navbar{
+	background: linear-gradient(#333, #111);
+	width:891px; 
+    margin:0 auto; 
+}
+
+.nav.navbar-nav{
+	border-radius: 3px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, .3),
+                0 3px 5px rgba(0, 0, 0, .2),
+                0 5px 10px rgba(0, 0, 0, .2),
+                0 20px 20px rgba(0, 0, 0, .15);
+    margin:0; padding:0; list-style:none;height: 35px;
+}
+
+.nav.navbar-nav li {
+	float:left; display:block; margin:0; padding:0;
+}
+
+.nav.navbar-nav li a{
+	float: left;
+	font-size: 85%;
+	color: #fff;
+	text-decoration: none;
+	padding: 12px 20px 10px;
+	text-align: center;
+    display: block;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, .4);
+    transition: padding .3s;
+    transition: padding .3s, background .3s;
+    transition: all .3s .1s;
+    position: relative;
+}
+
+.nav.navbar-nav li:first-child a{
+    border-radius: 3px 0 0 3px;
+}
+.nav.navbar-nav li:last-child a{
+    border-radius: 0 3px 3px 0;
+}
+
+.nav.navbar-nav li a:hover, 
+.nav.navbar-nav li a:focus{
+    background: rgba(255,255,255,.2);
+    transition: all .3s 0s; 
+} 
+
+.nav.navbar-nav li a:active{
+    background: linear-gradient(rgba(0,0,0,.2),rgba(0,0,0,.1)); 
+    box-shadow: 0 0 2px rgba(0,0,0,.3) inset;
+}
+
+.nav.navbar-nav li a::before{
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 9px;
+    margin-left: -2px;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, .5);
+}
+
+.nav.navbar-nav li a:hover::before,
+.nav.navbar-nav li a:focus::before{
+    background: white;
+    box-shadow: 0 0 2px white, 
+                0 -1px 0 rgba(0, 0, 0, .4);
+}
+
+h1#logo a{
+	font-size:200%; font-family: Georgia;
+	color: #ced1d2; text-decoration: none; display: block;padding: 18px 0 17px; font-weight: normal;
+}
+h1#logo a:hover{
+	color: #fff;
+}
+
+
+/*********************************/
+/*** global **********************/
+/***        **********************/
+.center{
+	display:block;
+	text-align:center;
+	float:none;
+	margin:auto!important;
+}
+
+html {
+	height : 100%;
+	min-height : 100%;
+
+}
+
+body {
+	background:black;	
+	padding-bottom :60px;
+}
+
+.glyphicon.glyphicon-chevron-down{
+	color: #555;
+	font-size: 12px;
+}
+
+.footer {
+	position : fixed;
+	bottom:0;
+	width : 100%;
+	height : 48px;
+	text-align: center;
+	background-color: #111!important;
+	color : #999;
+}
+
+.footer p {
+	margin-top : 14px;
+}
+
+.footer a {
+	text-decoration: none;
+	color : #999;
+}
+
+.footer a:hover {
+	color : white;
+}
+
+/********************************/
+/***********  Menu  *************/
+/********************************/
+sup.version {
+	font-size: 50%;
+	text-transform: uppercase;
+	top: -1em;
+}
+
+.navbar img {
+	margin-top :-12px;
+	margin-bottom :-12px;
+	margin-right : 10px;		
+	width:auto;
+	height:34px;
+}
+.version-beta {
+	color: orange;
+}
+
+/*********************************/
+/*** page ************************/
+/***      ************************/
+#page{
+	margin-top:60px; /* required to let some place for the top-fixed main menu bar. */
+	margin-bottom:60px;
+}
+
+/*********************************/
+/*** event ***********************/
+/***       ***********************/
+#eventPage{
+	width:100%;
+	color: #FFF;
+	font-size: 16px;
+	font-family: "Century Gothic",arial,serif;
+	text-align: left;
+	padding-top:20px;
+}
+

@@ -13,11 +13,20 @@
 
 	<body ng-app="myWebSite">
 
+		<div id="layout">
+      
+      	<div id="header">
+
+		<h1 id="logo">Nature Theme</h1>
+		<hr class="noscreen" />
+		
 		<nav-bar></nav-bar>
+
+		</div>
 
 		<div id="page" ng-view></div>
 
-		<footer-bar></footer-bar>
+		<!--<footer-bar></footer-bar>-->
 
 		<script src="./vendor/jquery/jquery.js"></script>
 		<script src="./vendor/bootstrap/dist/js/bootstrap.js"></script>
@@ -54,5 +63,6 @@
 		<!-- Angular Directives -->
 		<script src="./js/directives/footer.js"></script>
 		<script src="./js/directives/navigation.js"></script>    
+		</div>
 	</body>
 </html>
