@@ -24,8 +24,19 @@ h5 { font-size:100%; }
 }
 
 #header {
-	width:891px; margin:0 auto; 
+	width:891px; margin:0 30px; height:85px;
 }
+
+#intro{
+    background: #e6e8e9;
+}
+
+#intro-in{
+    width:861px; 
+    margin:0 30px; 
+    padding: 10px 0;
+}
+
 
 .headerPartPage{
 	display: inline-block;
@@ -37,15 +48,15 @@ h5 { font-size:100%; }
              
 /* horizontalni navigace --------------------------------------------------- */
 .navbar{
-	width:891px; 
-    margin:0 auto;
-    position: 50 
+	width:861px; 
+    margin:0 -5px;
 }
 
 .nav.navbar-nav{
 	border-radius: 3px;
     
     margin-top: -40px; ; padding:0; list-style:none;height: 35px;
+    text-align: center;
 }
 
 .nav.navbar-nav li {
@@ -60,7 +71,6 @@ h5 { font-size:100%; }
 	padding: 12px 20px 10px;
 	text-align: center;
     display: block;
-    text-shadow: 0 1px 0 rgba(255, 255, 255, .4);
     position: relative;
 }
 
@@ -105,3 +115,50 @@ ul, ol { display:block; margin:0px 0 15px 40px; }
 
 .noscreen { display:none; }
 
+/*********************************/
+/*** global **********************/
+/***        **********************/
+.center{
+	display:block;
+	text-align:center;
+	float:none;
+	margin:auto!important;
+}
+
+.glyphicon.glyphicon-chevron-down{
+	color: #555;
+	font-size: 12px;
+}
+
+@media (min-width: 768px) {
+	.mdRight {
+		float:right;
+	}
+	.mdHide{
+		display:none;
+	}
+}
+@media (max-width: 768px) {
+	.mdRight {
+		float:none;
+	}
+	.mdHide{
+		display:inline;
+	}
+}
+
+.inverse-dropdown{
+	background-color: #222;
+	border-color: #080808;
+}
+.inverse-dropdown li a{
+	color: #999;
+}
+.inverse-dropdown li a:hover{
+	color: white;
+	background-color: #222;
+}
+.inverse-dropdown li a.active{
+	color: white;
+	background-color: black;
+}
