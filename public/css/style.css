@@ -1,9 +1,27 @@
 body { 
-  padding: 0; 
-  font: 0.8em/1.5 "arial",sans-serif; 
+  padding: auto; 
   color: #354146; 
   background:black;	
-  padding-bottom :60px;
+  padding-bottom :auto;
+}
+
+
+//medium+ screen sizes
+@media (min-width:992px) {
+    .desktop-only {
+        display:block !important;
+    }
+}
+ 
+//small screen sizes
+@media (max-width: 991px) {
+    .mobile-only {
+        display:block !important;
+    }
+ 
+    .desktop-only {
+        display:none !important;
+	}
 }
 
 h2 { font-size:130%; color: #354146;font-weight: bold; padding: auto;margin:auto; }
@@ -21,27 +39,27 @@ h5 { font-size:100%; }
     padding: auto;
     color: #FFF;
 	font-size: 12px;
-  	font: 0.8em/1.5 "arial",sans-serif;
+  	font: 1.5em/1.5 "Times New Roman",sans-serif;
 }
 
 .headerPartPage{
 	display: inline-block;
 	border-bottom: 1px dashed rgb(255,255,255);
 	font-size: 120%;
-	font-family: "Times New Roman", Times, serif;
+	font: 1.5em/1.5 "Times New Roman",sans-serif;
 	font-style: italic;
 }
 
-.writeBody{
-	font-size: 90%;
-	font-family: "Times New Roman", Times, serif;
-}
 
 .imgStyle{
 	margin: 0px auto;
 	display:block;
 	margin-top:10px;
 	margin-bottom:10px;
+}
+
+.writeBody{
+	font: 1.5em/1.5 "Times New Roman",sans-serif;
 }
 
 .keyword{
@@ -186,4 +204,3 @@ sup.version {
   	font: 0.8em/1.5 "arial",sans-serif; 
 	padding-top:20px;
 }
-
