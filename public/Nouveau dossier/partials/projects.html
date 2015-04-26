@@ -1,0 +1,48 @@
+<div id="intro">
+    <div id="intro-in">
+    <h2>Projets universitaires</h2>
+    Cette page référence les projets suffisamments aboutis développés dans le cadre universitaire. Pour plus d'information concernant les projets professionnels, merci de me contacter par email.  
+    </div>
+</div>
+<div id="eventPage" class="container" >
+	<div ng-repeat="project in projects" >
+		<h1 class="headerPartPage"> {{project.title}} <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" ng-click="showState($index+1)"><span class="glyphicon glyphicon-chevron-down"></span></a></h1>
+ 		<div class="{{$index+1}}" style="display:none">
+			<div class="writeBody">{{project.description}}</div>
+				<img ng-src="data:{{project.filetype}};base64,{{project.base64}}" class="img-thumbnail imgStyle" height="400" width="400"/>
+			<div> 
+			<ul class="writeBody">
+				<li>Informations complémentaires :
+					<ul>
+						<li> Niveau : {{project.level}} </li>
+						<li> Période : {{project.dateStarting}} - {{project.dateEnding}} </li>
+						<li> Nombre de collaborateurs : {{project.teamNumber}} </li>
+						<li> Méthodes de travail :<span ng-repeat="workMethod in project.workMethods"> {{workMethod}};</span> </li>
+						<li> Technologies utilisées :<span ng-repeat="technologie in project.technologies"> {{technologie}};</span> </li>
+					</ul>
+				</li>
+				<li>Résultats :
+					<ul>
+						<div ng-repeat="result in project.results">
+							<li>{{result.description}} : <br/><img ng-src="data:{{result.filetype}};base64,{{result.base64}}" class="img-thumbnail imgStyle" height="400" width="400"/>
+							</li>
+						</div>
+					</ul>
+				</li>
+				<li>Expériences acquises : 
+					<ul>
+						<div ng-repeat="learning in project.learnings">
+							<li>{{learning}}</li>
+					</ul>
+				</li>
+				<li>Références :
+					<ul>
+						<div ng-repeat="reference in project.references">
+							<li>{{reference.name}} : {{reference.link}}</li>
+					</ul>
+				</li>
+			</ul>
+			</div>
+		</div>
+	</div>
+</div>
