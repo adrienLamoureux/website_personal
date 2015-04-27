@@ -7,43 +7,47 @@
 <div id="eventPage" class="container" >
 	<h1 class="headerPartPage"> Formations </h1>
 	<ul class="writeBody">
-	<div ng-repeat="formation in cv.formations">
-		<li> {{formation.dateStarting}} - {{formation.dateEnding}} : {{formation.graduation}} {{formation.domain}} {{formation.speciality}} à l'université de {{formation.university}}</li>
-	</div>
+		<div ng-repeat="formation in cv.formations">
+			<li> {{formation.dateStarting}} - {{formation.dateEnding}} : {{formation.graduation}} {{formation.domain}} {{formation.speciality}} à l'université de {{formation.university}}</li>
+		</div>
 	</ul>
 	<h1 class="headerPartPage"> Langues étrangères </h1>
 	<ul class="writeBody">
-	<div ng-repeat="language in cv.languages">
-		<li> {{language.name}} : {{language.level}} </li>
-	</div>
+		<div ng-repeat="language in cv.languages">
+			<li> {{language.name}} : {{language.level}} </li>
+		</div>
 	</ul>
 	<h1 class="headerPartPage"> Compétences techniques </h1>
 	<ul class="writeBody">
-	<div ng-repeat="skill in cv.skills">
-		<li> {{skill.name}} : 
-			<ul> <div ng-repeat="detailed in skill.details"> <li> {{detailed.name}} </li> </div> </ul> 
-		</li>
-	</div>
+		<div ng-repeat="skill in cv.skills">
+			<li> {{skill.name}} 
+				<ul class="visible-xs"> <div ng-repeat="detailed in skill.details"> <li ng-if="detailed.important == true">{{detailed.name}} </li> </div> </ul>
+				<ul class="hidden-xs"> <div ng-repeat="detailed in skill.details"> <li> {{detailed.name}} </li> </div> </ul>
+			</li>
+		</div>
 	</ul>
 	<h1 class="headerPartPage"> Expériences professionnelles </h1>
 	<ul class="writeBody">
-	<div ng-repeat="proExp in cv.proExps">
-		<li> {{proExp.entreprise}} 
-			<ul>
-				<li> Contrat : {{proExp.contractType}} </li>
-				<li> Période : {{proExp.dateStarting}} - {{proExp.dateEnding}} à {{proExp.hours}} </li>
-				<li> Localisation : {{proExp.place}} </li>
-				<li> Sujet : {{proExp.subject}} </li>
-				<li> Responsable : {{proExp.stageMasterName}} {{proExp.stageMasterForename}} </li>
-				<span ng-repeat="keyword in proExp.keywords" class="keyword"> {{keyword.word}} ;</span>
-			</ul>
-		</li>
-	</div>
+		<div class="hidden-xs" ng-repeat="proExp in cv.proExps">
+			<li> {{proExp.entreprise}} 
+				<ul>
+					<li> Contrat : {{proExp.contractType}} </li>
+					<li> Période : {{proExp.dateStarting}} - {{proExp.dateEnding}} à {{proExp.hours}} </li>
+					<li> Localisation : {{proExp.place}} </li>
+					<li> Sujet : {{proExp.subject}} </li>
+					<li> Responsable : {{proExp.stageMasterName}} {{proExp.stageMasterForename}} </li>
+					<span ng-repeat="keyword in proExp.keywords" class="keyword"> {{keyword.word}} ;</span>
+				</ul>
+			</li>
+		</div>
+		<div class="visible-xs" ng-repeat="proExp in cv.proExps">
+			<li > {{proExp.entreprise}}({{proExp.contractType}}) : <span ng-repeat="keyword in proExp.keywords" class="keyword"> {{keyword.word}} ;</span> </li>
+		</div>
 	</ul>
 	<h1 class="headerPartPage"> Centres d'intérêts </h1>
 	<ul class="writeBody">
-	<div ng-repeat="interest in cv.interests">
-		<li> {{interest}}</li>
-	</div>
+		<div ng-repeat="interest in cv.interests">
+			<li> {{interest}}</li>
+		</div>
 	</ul>
 </div>
