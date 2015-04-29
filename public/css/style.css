@@ -1,7 +1,5 @@
 body { 
   padding: auto; 
-  color: #354146; 
-  background:black;	
   padding-bottom :auto;
 }
 
@@ -24,20 +22,20 @@ body {
 	}
 }
 
-h2 { font-size:130%; color: #354146;font-weight: bold; padding: auto;margin:auto; }
+h2 { font-size:130%; font-weight: bold; padding: auto;margin:auto; }
 h3 { font-size:120%; }
 h4 { font-size:120%; }
 h5 { font-size:100%; }
 
 #intro{
-    background: rgb(30,30,30,0.5);
+    background-color: rgba(30,30,30,0.5);
 }
 
 #intro-in{
     width:auto; 
     margin:0 auto; 
     padding: auto;
-    color: #FFF;
+    color: white;
 	font-size: 12px;
   	font: 1.5em/1.5 "Times New Roman",sans-serif;
 }
@@ -133,11 +131,26 @@ h5 { font-size:100%; }
 	margin:auto!important;
 }
 
+.ng-scope {
+	background: transparent;
+	background-color: rgba(255,255,255,0.0);
+}
+
 html {
 	height : 100%;
 	min-height : 100%;
-
+	/*background: url(resources/bg-9-full.jpg) no-repeat center center fixed;*/
+	/*background: url(resources/561522c1a3948de1150e29b049d7ed78_large.jpeg) no-repeat center center fixed;*/
+	/*background: url(resources/bg-11-full.jpg) no-repeat center center fixed;*/
+	/*background: url(resources/bg-12-full.jpg) no-repeat center center fixed;*/
+	/*background: url(resources/keshiki.jpg) no-repeat center center fixed;*/
+	background: url(resources/blueVector.jpg) no-repeat center center fixed; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
 }
+
 
 .glyphicon.glyphicon-chevron-down{
 	color: #555;
@@ -193,14 +206,7 @@ sup.version {
 #page{
 	margin-top:60px; /* required to let some place for the top-fixed main menu bar. */
 	margin-bottom:60px;
-}
-
-/*********************************/
-/*** event ***********************/
-/***       ***********************/
-#eventPage{
-	color: #FFF;
 	font-size: 12px;
-  	font: 0.8em/1.5 "arial",sans-serif; 
 	padding-top:20px;
+	color:white;
 }
