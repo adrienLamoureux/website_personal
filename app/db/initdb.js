@@ -89,7 +89,7 @@ var initCV = function(db){
 					},
 					{
 						name: "Visualisation de données, Réseau de Neurones et Data Mining",
-						important: false,
+						important: true,
 						link: null
 					}]
 				},
@@ -102,7 +102,7 @@ var initCV = function(db){
 					},
 					{
 						name: "Web : LAMP (Linux Apache MySQL Php) et MEAN (MongoDB Express AngularJS NodeJS)",
-						important: false,
+						important: true,
 						link: null
 					},
 					{
@@ -117,7 +117,7 @@ var initCV = function(db){
 					},
 					{
 						name: "Langages de programmation : C/C++, Qt, Pascal Objet, Java(JSE, J2EE), Python, Perl, R, Lisp, Javascript, PHP, SQL",
-						important: false,
+						important: true,
 						link: null
 					}]
 				}
@@ -219,7 +219,7 @@ var initCV = function(db){
 					entreprise: "Décathlon",
 					place: "Béziers",
 					linkTo: null,
-					stageMasterName: null,
+					stageMasterName: "Décathlon",
 					stageMasterForename: null,
 					subject: "Vendeur dans le secteur de la natation",
 					keywords: [],
@@ -250,7 +250,7 @@ var initHome = function(db){
 				name: "LAMOUREUX",
 				forename: "Adrien",
 				age: "22",
-				presentation: "Bonjour. Je suis étudiant en informatique spécialisé dans le Génie Logiciel à l'université de Bordeaux. Je suis actuellement en stage à Clinsight pendant 6 mois. Je vous remercie de votre visite.",
+				presentation: "Bonjour, je suis étudiant en informatique spécialisé dans le Génie Logiciel à l'université de Bordeaux. Je suis actuellement en stage à Clinsight pendant 6 mois. Je vous remercie de votre visite.",
 				mailToContact: "vergil1534@gmail.com",
 				zipCode: 33600,
 				city: "Pessac",
