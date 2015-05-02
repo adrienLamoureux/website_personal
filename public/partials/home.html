@@ -1,5 +1,5 @@
 <!-- HomePage Partial -->
-<div class="container">
+<div class="container" style="margin:-80px auto auto auto">
 <div class="hidden-xs">
 	<div style="float:left; width: 70%">
 		<h1 class="headerPartPage"> Présentation</h1>
@@ -14,8 +14,8 @@
 		<h1 class="headerPartPage"> Contact </h1>
 		<div class="writeBody">
 			<div>{{home.name}} {{home.forename}}</div>
-			<div>Age : {{home.age}}</div>
-			<div>EMail : {{home.mailToContact}}</div>
+			<div>Age : {{home.age}} ans</div>
+			<div>Email : <a href="mailto:{{home.mailToContact}}" style="font-style:italic; color:white">{{home.mailToContact}}</a></div>
 			<div>Adresse : {{home.street}}, {{home.zipCode}} {{home.city}}</div>
 		</div>
 	</div>
@@ -25,6 +25,6 @@
 <br/>
 <div> {{home.presentation}} </div>
 <br/>
-<div style="font-style:italic"> {{home.mailToContact}} </div>
+<div> <a href="mailto:{{home.mailToContact}}" style="font-style:italic; color:white"> {{home.mailToContact}} </a></div>
 </div>
 </div>
