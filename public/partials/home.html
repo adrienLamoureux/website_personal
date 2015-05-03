@@ -1,6 +1,6 @@
 <!-- HomePage Partial -->
 <div class="container" style="margin:-80px auto auto auto">
-<div class="hidden-xs">
+<!--<div class="hidden-xs">
 	<div style="float:left; width: 70%">
 		<h1 class="headerPartPage"> Présentation</h1>
 			<div id="test" class="writeBody">
@@ -19,6 +19,19 @@
 			<div>Adresse : {{home.street}}, {{home.zipCode}} {{home.city}}</div>
 		</div>
 	</div>
+	</div>-->
+	<div class="hidden-xs">
+		<h1 class="headerPartPage"> Présentation</h1>
+			<div id="test" class="writeBody">
+		        {{home.presentation}}
+	      	</div>
+		<h1 class="headerPartPage"> Contact </h1>
+		<div class="writeBody">
+			<div>{{home.name}} {{home.forename}}</div>
+			<div>Age : {{home.age}} ans</div>
+			<div>Email : <a href="mailto:{{home.mailToContact}}" style="font-style:italic; color:white">{{home.mailToContact}}</a></div>
+			<div>Adresse : {{home.street}}, {{home.zipCode}} {{home.city}}</div>
+		</div>
 	</div>
 <div class="visible-xs writeBody">
 <div style="text-align:right"> {{home.name}} {{home.forename}}</div>
