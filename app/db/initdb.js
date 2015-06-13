@@ -106,7 +106,7 @@ var initCV = function(db){
 						link: null
 					},
 					{
-						name: "Imagerie et modélisation 3D",
+						name: "Imagerie et modélisation 3D (OpenGL, Blender 3D)",
 						important: false,
 						link: null
 					},
@@ -116,7 +116,7 @@ var initCV = function(db){
 						link: null
 					},
 					{
-						name: "Langages de programmation : C/C++, Qt, Pascal Objet, Java(JSE, J2EE), Python, Perl, R, Lisp, Javascript, PHP, SQL",
+						name: "Langages de programmation : C/C++, C#, Qt, Pascal Objet, Java(JSE, J2EE), Python, Perl, R, Lisp, ASP.net, Javascript, PHP, SQL",
 						important: true,
 						link: null
 					}]
@@ -124,6 +124,34 @@ var initCV = function(db){
 				],
 				proExps: [
 				{
+					entreprise: "CLINSIGHT de ENNOV",
+					place: "Cenon",
+					linkTo: null,
+					stageMasterName: "Leveau",
+					stageMasterForename: "Joffrey",
+					subject: "Migration de bases de données légères et développement d'un WebService dédié au publipostage (dont Word)",
+					keywords: [
+					{
+						word: "Delphi"
+					},
+					{
+					 	word: "SQLite"
+					},
+					{
+						word: "C#"
+					},
+					{
+						word: "WebService"
+					},
+					{
+						word: "OLE Word"
+					}
+					],
+					dateStarting: "(En cours) Avril 2015",
+					dateEnding: "Septembre 2015",
+					hours: "35 heures hebdomadaire",
+					contractType: "Stage"
+				},{
 					entreprise: "GO GEOENGENEERING",
 					place: "Pau",
 					linkTo: null,
@@ -234,7 +262,8 @@ var initCV = function(db){
 				"Cosmologie",
 				"Modélisation 3D",
 				"Jeux de société",
-				"Apprendre"
+				"C++/Qt",
+				"Programmation Web"
 				]
 			}], function (err, result){
 				console.log("CV inserted");
