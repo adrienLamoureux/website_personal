@@ -13,7 +13,7 @@ var initCV = function(db){
 					speciality: "Génie Logiciel",
 					university: "Bordeaux",
 					dateStarting: "2013",
-					dateEnding: "2015 (en cours)"
+					dateEnding: "2015"
 				},
 				{
 					graduation: "Licence",
@@ -124,6 +124,31 @@ var initCV = function(db){
 				],
 				proExps: [
 				{
+					entreprise: "2MoRO Solutions",
+					place: "Bidart",
+					linkTo: null,
+					stageMasterName: "Dagois",
+					stageMasterForename: "Pierre",
+					subject: "Développement de projets Web HTML5/CSS3 avec AngularJS (front-end) et J2EE avec Spring/Hibernate (back-end) pour la maintenance et la réparation opérationnelle dans le secteur aéronautique",
+					keywords: [
+					{
+						word: "HTML5/CSS3"
+					},
+					{
+					 	word: "AngularJS"
+					},
+					{
+						word: "Spring"
+					},
+					{
+						word: "Hibernate"
+					}
+					],
+					dateStarting: "Octobre 2015",
+					dateEnding: "En cours",
+					hours: "35 heures hebdomadaire",
+					contractType: "CDI"
+				},{
 					entreprise: "CLINSIGHT de ENNOV",
 					place: "Cenon",
 					linkTo: null,
@@ -279,14 +304,14 @@ var initHome = function(db){
 			{
 				name: "LAMOUREUX",
 				forename: "Adrien",
-				age: "22",
-				presentation: "Bonjour, je suis étudiant en informatique spécialisé dans le Génie Logiciel à l'université de Bordeaux. Je suis actuellement en stage à Clinsight pendant 6 mois. Merci de votre visite.",
+				age: "23",
+				presentation: "Bonjour, je travail actuellement en tant qu'ingénieur en informatique à 2MoRO Solutions. Merci de votre visite.",
 				mailToContact: "vergil1534@gmail.com",
-				zipCode: 33600,
-				city: "Pessac",
+				zipCode: 64100,
+				city: "Bayonne",
 				county: "Aquitaine",
 				country: "France",
-				street: "18 avenue de Villemejan",
+				street: "9 rue de la Feuillée",
 				filetype: "image/jpeg",
 				filename: "backgroud.jpg",
 				filesize: 373566,
