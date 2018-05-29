@@ -62,6 +62,10 @@ module.exports = function(app, passport) {
 		res.redirect('/');
 	});
 
+	app.get('/api/test', function(req, res, next){
+		return res.send({text: "test OK"});
+	});
+
 	app.get('/api/home', function(req, res, next){
 		homeModel.find(function(err, coll){
 			if (!err) {

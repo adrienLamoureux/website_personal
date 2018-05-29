@@ -18,15 +18,6 @@ var	cookieParser = require('cookie-parser');
 var	session = require('express-session');
 
 // configuration ===============================================================
-mongoose.connect(mongoAdress, function(err){
-  if(err){
-	    console.error("Failed to connect to MongoDB");
-	    console.log(err);
-  }
-  else
-  		console.log("Successfully connection to MongoDB");
-});
-
 require('./config/passport')(passport); // pass passport for configuration
 
 // set up our express application
@@ -49,3 +40,13 @@ require('./app/routes.js')(app, passport); // load our routes and pass in our ap
 // launch ======================================================================
 app.listen(port);
 console.log('Express started at ' + port);
+
+// mongoDB ===============================================================
+mongoose.connect(mongoAdress, function(err){
+  if(err){
+	    console.error("Failed to connect to MongoDB");
+	    console.log(err);
+  }
+  else
+  		console.log("Successfully connection to MongoDB");
+});
